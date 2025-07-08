@@ -1,0 +1,1261 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0520.1026                               -->
+<workbook original-version='18.1' source-build='2025.1.2 (20251.25.0520.1026)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <ParameterAction />
+    <ParameterActionClearSelection />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='user_events' path='/workbooks' revision='1.3' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='eventFilter' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;first-payment&quot;'>
+        <calculation class='tableau' formula='&quot;first-payment&quot;' />
+        <members>
+          <member value='&quot;email-verification&quot;' />
+          <member value='&quot;first-payment&quot;' />
+          <member value='&quot;profile-completion&quot;' />
+          <member value='&quot;registration&quot;' />
+          <member value='&quot;setup-completion&quot;' />
+          <member value='&quot;trial-start&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='onboarding_funnel_product' inline='true' name='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='onboarding_funnel_product' name='textscan.0sc20u009uexky198vra610aqe9d'>
+            <connection class='textscan' directory='C:/git/tableau/Yeni klasör' filename='onboarding_funnel_product.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0sc20u009uexky198vra610aqe9d' name='onboarding_funnel_product.csv' table='[onboarding_funnel_product#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='tr_TR'>
+            <column datatype='string' name='user_id' ordinal='0' />
+            <column datatype='string' name='event' ordinal='1' />
+            <column datatype='date' date-parse-format='yyyy-MM-dd HH:mm:ss.SSSSSS zzz' name='event_timestamp' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[onboarding_funnel_product.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;tr&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₺&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;tr_TR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[onboarding_funnel_product.csv]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LTR_RTR' />
+            <object-id>[onboarding_funnel_product.csv_CF8A632425504D6397C7920F3032464D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>event</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[event]</local-name>
+            <parent-name>[onboarding_funnel_product.csv]</parent-name>
+            <remote-alias>event</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LTR_RTR' />
+            <object-id>[onboarding_funnel_product.csv_CF8A632425504D6397C7920F3032464D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>event_timestamp</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[event_timestamp]</local-name>
+            <parent-name>[onboarding_funnel_product.csv]</parent-name>
+            <remote-alias>event_timestamp</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LTR_RTR' />
+            <object-id>[onboarding_funnel_product.csv_CF8A632425504D6397C7920F3032464D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total Users' datatype='integer' name='[Calculation_1430737335204896770]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([user_id])' />
+      </column>
+      <column caption='isTrialUser' datatype='integer' name='[Calculation_1430737335205715971]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [user_id]: &#13;&#10;    IF &#13;&#10;        SUM(IF [event] = &apos;trial-start&apos; THEN 1 ELSE 0 END) &gt;= 0 &#13;&#10;        AND&#13;&#10;        SUM(IF [event] = &apos;first-payment&apos; THEN 1 ELSE 0 END) = 0 &#13;&#10;    THEN 1 &#13;&#10;    ELSE 0&#13;&#10;    END&#13;&#10;}' />
+      </column>
+      <column caption='Trial Users' datatype='integer' name='[Calculation_1430737335215517702]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_1430737335205715971])' />
+      </column>
+      <column caption='isPaidUser' datatype='integer' name='[Calculation_1430737335217983497]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [user_id]: &#13;&#10;    IF &#13;&#10;        SUM(IF [event] = &apos;first-payment&apos; THEN 1 ELSE 0 END) &gt; 0 &#13;&#10;    THEN 1 &#13;&#10;    ELSE 0&#13;&#10;    END&#13;&#10;}' />
+      </column>
+      <column caption='Paid Users' datatype='integer' name='[Calculation_1430737335218614282]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_1430737335217983497])' />
+      </column>
+      <column caption='Trial conversion  rate' datatype='real' name='[Calculation_1430737335220805643]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_1430737335215517702] / [Calculation_1430737335204896770]' />
+      </column>
+      <column caption='Paid conversion rate' datatype='real' name='[Calculation_1430737335225307148]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Calculation_1430737335204896770] = 0 THEN 0&#13;&#10;ELSE [Calculation_1430737335218614282] / [Calculation_1430737335204896770]&#13;&#10;END' />
+      </column>
+      <column caption='hadRegistration' datatype='integer' name='[Calculation_1430737335227764749]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [event] = &apos;registration&apos; THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='Registration to trial' datatype='integer' name='[Calculation_1430737335233073166]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='COUNTD(IF {FIXED [user_id]: &#13;&#10;&#13;&#10;   IF &#13;&#10;    SUM(IF [event] = &apos;registration&apos; THEN 1 ELSE 0 END) &gt; 0 &#13;&#10;    AND &#13;&#10;    SUM(IF [event] = &apos;trial-start&apos; THEN 1 ELSE 0 END) &gt; 0  &#13;&#10;   THEN 1&#13;&#10;   ELSE 0&#13;&#10;   END&#13;&#10;} = 1 THEN [user_id] &#13;&#10;END)' />
+      </column>
+      <column caption='Month of registration' datatype='date' name='[Calculation_1430737335239405583]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{ FIXED [user_id] : MIN(IF [event] = &apos;registration&apos; THEN [event_timestamp] END) }' />
+      </column>
+      <column caption='Days for payment' datatype='integer' name='[Calculation_1430737335854436368]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;, [Calculation_1430737335239405583],  [Calculation_1430737335868772369])' />
+      </column>
+      <column caption='Month of last event' datatype='date' name='[Calculation_1430737335868772369]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{ FIXED [user_id] : MIN(IF [event] = [Parameters].[Parameter 1] THEN [event_timestamp] END) }' />
+      </column>
+      <column caption='onboarding_funnel_product.csv' datatype='table' name='[__tableau_internal_object_id__].[onboarding_funnel_product.csv_CF8A632425504D6397C7920F3032464D]' role='measure' type='quantitative' />
+      <column datatype='string' name='[event]' role='dimension' type='nominal' />
+      <column datatype='date' datatype-customized='true' name='[event_timestamp]' role='dimension' type='ordinal' />
+      <column-instance column='[event]' derivation='None' name='[none:event:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_1430737335227764749]' derivation='Sum' name='[sum:Calculation_1430737335227764749:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1430737335233073166]' derivation='User' name='[usr:Calculation_1430737335233073166:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (event)' hidden='true' name='[Action (event)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[event]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/henry/AppData/Local/Temp/TableauTemp/#TableauTemp_0e1fgvj1s28gyl1dz314z1auqyd2.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>user_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[user_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>user_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>onboarding_funnel_product.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7335</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LTR_RTR' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>event</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[event]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>event</remote-alias>
+              <ordinal>1</ordinal>
+              <family>onboarding_funnel_product.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LTR_RTR' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>event_timestamp</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[event_timestamp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>event_timestamp</remote-alias>
+              <ordinal>2</ordinal>
+              <family>onboarding_funnel_product.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>250</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:event:nk]' palette='green_10_0' type='palette'>
+            <map to='#24693d'>
+              <bucket>&quot;first-payment&quot;</bucket>
+            </map>
+            <map to='#2f8243'>
+              <bucket>&quot;trial-start&quot;</bucket>
+            </map>
+            <map to='#4e9a51'>
+              <bucket>&quot;setup-completion&quot;</bucket>
+            </map>
+            <map to='#6ab25f'>
+              <bucket>&quot;profile-completion&quot;</bucket>
+            </map>
+            <map to='#87cc79'>
+              <bucket>&quot;email-verification&quot;</bucket>
+            </map>
+            <map to='#b3e0a6'>
+              <bucket>&quot;registration&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' palette='green_gold_10_0' type='palette'>
+            <map to='#4a956e'>
+              <bucket>&quot;[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[sum:Calculation_1430737335227764749:qk]&quot;</bucket>
+            </map>
+            <map to='#f4d166'>
+              <bucket>&quot;[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Turkey&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='eventFilter' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;first-payment&quot;'>
+          <calculation class='tableau' formula='&quot;first-payment&quot;' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='onboarding_funnel_product.csv' id='onboarding_funnel_product.csv_CF8A632425504D6397C7920F3032464D'>
+            <properties context=''>
+              <relation connection='textscan.0sc20u009uexky198vra610aqe9d' name='onboarding_funnel_product.csv' table='[onboarding_funnel_product#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='tr_TR'>
+                  <column datatype='string' name='user_id' ordinal='0' />
+                  <column datatype='string' name='event' ordinal='1' />
+                  <column datatype='date' date-parse-format='yyyy-MM-dd HH:mm:ss.SSSSSS zzz' name='event_timestamp' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <edit-parameter-action caption='parameterChange' name='[Action2_91A8C27E50754963A4F6DF0E3AB9523A]'>
+      <activation type='on-select' />
+      <source dashboard='Dashboard ' type='sheet' worksheet='FUNNEL CHART ' />
+      <agg-type type='attr' />
+      <clear-option type='assign-fixed-value' value='s:LROOT:first-payment' />
+      <params>
+        <param name='source-field' value='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[none:event:nk]' />
+        <param name='target-parameter' value='[Parameters].[Parameter 1]' />
+      </params>
+    </edit-parameter-action>
+  </actions>
+  <worksheets>
+    <worksheet name='AVG DAYS'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tw Cen MT Condensed' fontsize='12'><![CDATA[Average days from registration to <]]></run>
+            <run fontcolor='#000000' fontname='Tw Cen MT Condensed' fontsize='12'>[Parameters].[Parameter 1]</run>
+            <run fontcolor='#000000' fontname='Tw Cen MT Condensed' fontsize='12'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='onboarding_funnel_product' name='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='eventFilter' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;first-payment&quot;'>
+              <calculation class='tableau' formula='&quot;first-payment&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h'>
+            <column caption='Month of registration' datatype='date' name='[Calculation_1430737335239405583]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ FIXED [user_id] : MIN(IF [event] = &apos;registration&apos; THEN [event_timestamp] END) }' />
+            </column>
+            <column caption='Days for payment' datatype='integer' name='[Calculation_1430737335854436368]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEDIFF(&apos;day&apos;, [Calculation_1430737335239405583],  [Calculation_1430737335868772369])' />
+            </column>
+            <column caption='Month of last event' datatype='date' name='[Calculation_1430737335868772369]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ FIXED [user_id] : MIN(IF [event] = [Parameters].[Parameter 1] THEN [event_timestamp] END) }' />
+            </column>
+            <column-instance column='[Calculation_1430737335854436368]' derivation='Avg' name='[avg:Calculation_1430737335854436368:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column datatype='date' datatype-customized='true' name='[event_timestamp]' role='dimension' type='ordinal' />
+            <column-instance column='[event]' derivation='None' name='[none:event:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1430737335239405583]' derivation='Month-Trunc' name='[tmn:Calculation_1430737335239405583:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[user_id]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[none:event:nk]'>
+            <groupfilter function='level-members' level='[none:event:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[none:event:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]' scope='cols' value='Month of registration' />
+            <format attr='display' class='0' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[avg:Calculation_1430737335854436368:qk]' scope='rows' value='false' />
+            <format attr='tick-color' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[avg:Calculation_1430737335854436368:qk]' value='#00000000' />
+            <format attr='tick-color' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]' value='#00000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]' value='*mm.YYYY' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tw Cen MT Condensed' />
+            <format attr='font-size' value='8' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed'> Month of registration:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed'><![CDATA[Avg. days for  <[Parameters].[Parameter 1]>:	]]></run>
+                <run bold='true' fontname='Tw Cen MT Condensed'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[avg:Calculation_1430737335854436368:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='line-interpolation' value='step' />
+                <format attr='mark-color' value='#99b597' />
+                <format attr='has-stroke' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[avg:Calculation_1430737335854436368:qk]</rows>
+        <cols>[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]</cols>
+      </table>
+      <simple-id uuid='{A9E3432C-3550-415B-9ADE-1C58E75A14A7}' />
+    </worksheet>
+    <worksheet name='FUNNEL CHART '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tw Cen MT Condensed' fontsize='12'>User Conversion Funnel</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='onboarding_funnel_product' name='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h'>
+            <column caption='Total Users' datatype='integer' name='[Calculation_1430737335204896770]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([user_id])' />
+            </column>
+            <column datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column-instance column='[event]' derivation='None' name='[none:event:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1430737335204896770]' derivation='User' name='[pcto:usr:Calculation_1430737335204896770:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column datatype='string' name='[user_id]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1430737335204896770]' derivation='User' name='[usr:Calculation_1430737335204896770:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[none:event:nk]' direction='DESC' using='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]' scope='rows' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+            <encoding attr='space' class='0' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]' field-type='quantitative' max='25788' min='-484' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-width' value='0' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[none:event:nk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]' value='true' />
+            <format attr='break-on-special' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]' value='true' />
+            <format attr='show-null-value-warning' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]' value='true' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[none:event:nk]' />
+              <text column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[none:event:nk]' />
+              <size column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]' />
+              <text column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]' />
+              <text column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[pcto:usr:Calculation_1430737335204896770:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>Name of event:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[none:event:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>Conversition rate:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[pcto:usr:Calculation_1430737335204896770:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>Users:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#ffffff'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[none:event:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#ffffff'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[pcto:usr:Calculation_1430737335204896770:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#ffffff'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='on' />
+                <format attr='text-orientation' value='0' />
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Tw Cen MT Condensed' />
+                <format attr='font-size' value='10' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9560221433639526' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{E324DA19-4C0E-4D0E-A520-E9E1C92558D6}' />
+    </worksheet>
+    <worksheet name='PAID USERS'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#24693d' fontname='Tw Cen MT Condensed Extra Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='onboarding_funnel_product' name='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h'>
+            <column caption='Total Users' datatype='integer' name='[Calculation_1430737335204896770]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([user_id])' />
+            </column>
+            <column caption='isPaidUser' datatype='integer' name='[Calculation_1430737335217983497]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [user_id]: &#13;&#10;    IF &#13;&#10;        SUM(IF [event] = &apos;first-payment&apos; THEN 1 ELSE 0 END) &gt; 0 &#13;&#10;    THEN 1 &#13;&#10;    ELSE 0&#13;&#10;    END&#13;&#10;}' />
+            </column>
+            <column caption='Paid Users' datatype='integer' name='[Calculation_1430737335218614282]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_1430737335217983497])' />
+            </column>
+            <column caption='Paid conversion rate' datatype='real' name='[Calculation_1430737335225307148]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Calculation_1430737335204896770] = 0 THEN 0&#13;&#10;ELSE [Calculation_1430737335218614282] / [Calculation_1430737335204896770]&#13;&#10;END' />
+            </column>
+            <column datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column datatype='string' name='[user_id]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1430737335218614282]' derivation='User' name='[usr:Calculation_1430737335218614282:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1430737335225307148]' derivation='User' name='[usr:Calculation_1430737335225307148:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='text-format' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335225307148:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#59a14f' />
+            <format attr='font-size' value='15' />
+            <format attr='font-family' value='Tw Cen MT Condensed' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335225307148:qk]' />
+              <text column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335218614282:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed'>Conversion rate:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335225307148:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{984397F5-CB63-4F8B-A95F-447A8707F6AE}' />
+    </worksheet>
+    <worksheet name='REGISTRATION'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Tw Cen MT Condensed' fontsize='12'>Registrations vs. Trial Starts by Month</run>
+            <run fontname='Tw Cen MT Condensed' fontsize='12'>Æ </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='onboarding_funnel_product' name='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h'>
+            <column caption='hadRegistration' datatype='integer' name='[Calculation_1430737335227764749]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [event] = &apos;registration&apos; THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Registration to trial' datatype='integer' name='[Calculation_1430737335233073166]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='COUNTD(IF {FIXED [user_id]: &#13;&#10;&#13;&#10;   IF &#13;&#10;    SUM(IF [event] = &apos;registration&apos; THEN 1 ELSE 0 END) &gt; 0 &#13;&#10;    AND &#13;&#10;    SUM(IF [event] = &apos;trial-start&apos; THEN 1 ELSE 0 END) &gt; 0  &#13;&#10;   THEN 1&#13;&#10;   ELSE 0&#13;&#10;   END&#13;&#10;} = 1 THEN [user_id] &#13;&#10;END)' />
+            </column>
+            <column caption='Month of registration' datatype='date' name='[Calculation_1430737335239405583]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ FIXED [user_id] : MIN(IF [event] = &apos;registration&apos; THEN [event_timestamp] END) }' />
+            </column>
+            <column datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column datatype='date' datatype-customized='true' name='[event_timestamp]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1430737335227764749]' derivation='Sum' name='[sum:Calculation_1430737335227764749:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1430737335239405583]' derivation='Month-Trunc' name='[tmn:Calculation_1430737335239405583:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[user_id]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1430737335233073166]' derivation='User' name='[usr:Calculation_1430737335233073166:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='title' class='0' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]' scope='cols' value='Month of registration' />
+            <format attr='title' class='0' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[sum:Calculation_1430737335227764749:qk]' scope='rows' value='Registrations' />
+            <format attr='title' class='0' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk]' scope='rows' value='Trial Starts' />
+            <format attr='tick-color' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk]' value='#00000000' />
+            <format attr='tick-color' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]' value='#00000000' />
+            <format attr='tick-color' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[sum:Calculation_1430737335227764749:qk]' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='border-width' data-class='subtotal' value='0' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]' value='8' />
+            <format attr='font-family' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]' value='Tw Cen MT Condensed' />
+            <format attr='text-format' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]' value='*mm.YYYY' />
+            <format attr='font-size' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[sum:Calculation_1430737335227764749:qk]' value='8' />
+            <format attr='font-family' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[sum:Calculation_1430737335227764749:qk]' value='Tw Cen MT Condensed' />
+            <format attr='font-size' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk]' value='8' />
+            <format attr='font-family' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk]' value='Tw Cen MT Condensed' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='border-width' data-class='subtotal' value='0' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>Month of registration:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>hadRegistration:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[sum:Calculation_1430737335227764749:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>Registration to trial:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[sum:Calculation_1430737335227764749:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>Month of registration:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>Registration:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[sum:Calculation_1430737335227764749:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>Registration to trial:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>Month of registration:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>hadRegistration:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[sum:Calculation_1430737335227764749:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed' fontsize='8'>Registration to trial:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed' fontsize='8'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>([federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[sum:Calculation_1430737335227764749:qk] + [federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335233073166:qk])</rows>
+        <cols>[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:qk]</cols>
+      </table>
+      <simple-id uuid='{02443A08-3293-4D5A-A5E2-2B761AB0FA24}' />
+    </worksheet>
+    <worksheet name='TOTAL USERS'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#24693d' fontname='Tw Cen MT Condensed Extra Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='onboarding_funnel_product' name='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h'>
+            <column caption='Total Users' datatype='integer' name='[Calculation_1430737335204896770]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([user_id])' />
+            </column>
+            <column datatype='string' name='[user_id]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1430737335204896770]' derivation='User' name='[usr:Calculation_1430737335204896770:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#59a14f' />
+            <format attr='font-size' value='15' />
+            <format attr='font-family' value='Tw Cen MT Condensed' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed'>Total Users:&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E02B68AC-CB48-400B-8A91-88F4E3E74D9D}' />
+    </worksheet>
+    <worksheet name='TRIAL USERS'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#24693d' fontname='Tw Cen MT Condensed Extra Bold'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='onboarding_funnel_product' name='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f8xdrf1ac7dbq0zrap4d0noaf1h'>
+            <column caption='Total Users' datatype='integer' name='[Calculation_1430737335204896770]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([user_id])' />
+            </column>
+            <column caption='isTrialUser' datatype='integer' name='[Calculation_1430737335205715971]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [user_id]: &#13;&#10;    IF &#13;&#10;        SUM(IF [event] = &apos;trial-start&apos; THEN 1 ELSE 0 END) &gt;= 0 &#13;&#10;        AND&#13;&#10;        SUM(IF [event] = &apos;first-payment&apos; THEN 1 ELSE 0 END) = 0 &#13;&#10;    THEN 1 &#13;&#10;    ELSE 0&#13;&#10;    END&#13;&#10;}' />
+            </column>
+            <column caption='Trial Users' datatype='integer' name='[Calculation_1430737335215517702]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_1430737335205715971])' />
+            </column>
+            <column caption='Trial conversion  rate' datatype='real' name='[Calculation_1430737335220805643]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_1430737335215517702] / [Calculation_1430737335204896770]' />
+            </column>
+            <column datatype='string' name='[event]' role='dimension' type='nominal' />
+            <column datatype='string' name='[user_id]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1430737335215517702]' derivation='User' name='[usr:Calculation_1430737335215517702:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1430737335220805643]' derivation='User' name='[usr:Calculation_1430737335220805643:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335220805643:qk]' value='p0.00%' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335220805643:qk]' value='' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#59a14f' />
+            <format attr='font-size' value='15' />
+            <format attr='font-family' value='Tw Cen MT Condensed' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335220805643:qk]' />
+              <text column='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335215517702:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575' fontname='Tw Cen MT Condensed'>Conversion rate :&#9;</run>
+                <run bold='true' fontname='Tw Cen MT Condensed'><![CDATA[<[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335220805643:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{55DCB0BD-260A-4C4B-A838-1DD2D1785DB6}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard '>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97988' id='20' param='horz' type-v2='layout-flow' w='99150' x='425' y='1006'>
+            <zone h='97988' id='12' param='horz' type-v2='layout-flow' w='99150' x='425' y='1006'>
+              <zone h='97988' id='10' type-v2='layout-basic' w='99150' x='425' y='1006'>
+                <zone h='13157' id='5' name='TRIAL USERS' w='40330' x='31620' y='1006'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='13157' id='6' param='horz' type-v2='layout-flow' w='31195' x='425' y='1006'>
+                  <zone h='13157' id='3' name='TOTAL USERS' w='31195' x='425' y='1006'>
+                    <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone h='13157' id='7' name='PAID USERS' w='27625' x='71950' y='1006'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='84831' id='8' param='horz' type-v2='layout-flow' w='99150' x='425' y='14163'>
+                  <zone fixed-size='925' h='84831' id='9' is-fixed='true' name='FUNNEL CHART ' w='49575' x='425' y='14163'>
+                    <layout-cache minheight='100' type-h='scalable' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                      <format attr='padding' value='20' />
+                    </zone-style>
+                  </zone>
+                  <zone h='84831' id='22' param='vert' type-v2='layout-flow' w='49575' x='50000' y='14163'>
+                    <zone h='42064' id='23' param='horz' type-v2='layout-flow' w='49575' x='50000' y='14163'>
+                      <zone fixed-size='305' h='42064' id='18' is-fixed='true' name='AVG DAYS' w='49575' x='50000' y='14163'>
+                        <layout-cache minheight='198' type-h='scalable' type-w='cell' />
+                        <zone-style>
+                          <format attr='border-color' value='#000000' />
+                          <format attr='border-style' value='none' />
+                          <format attr='border-width' value='0' />
+                          <format attr='margin' value='4' />
+                          <format attr='padding' value='20' />
+                        </zone-style>
+                      </zone>
+                    </zone>
+                    <zone fixed-size='332' h='42767' id='15' is-fixed='true' name='REGISTRATION' w='49575' x='50000' y='56227'>
+                      <layout-cache minheight='198' minwidth='224' type-h='scalable' type-w='scalable' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                        <format attr='padding' value='20' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone fixed-size='770' h='16478' id='21' is-fixed='true' name='AVG DAYS' pane-specification-id='0' param='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:ok]' show-title='false' type-v2='color' w='6002' x='93317' y='27170' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='41' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97988' id='40' param='vert' type-v2='layout-flow' w='99010' x='495' y='1006'>
+                <zone fixed-size='97' h='13157' id='3' is-fixed='true' name='TOTAL USERS' w='31151' x='495' y='1006'>
+                  <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='97' h='13157' id='5' is-fixed='true' name='TRIAL USERS' w='40274' x='31646' y='1006'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='97' h='13157' id='7' is-fixed='true' name='PAID USERS' w='27585' x='71920' y='1006'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='84831' id='9' is-fixed='true' name='FUNNEL CHART ' w='57735' x='495' y='14163'>
+                  <layout-cache minheight='100' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42064' id='18' is-fixed='true' name='AVG DAYS' w='41275' x='58230' y='14163'>
+                  <layout-cache minheight='198' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='770' h='16478' id='21' name='AVG DAYS' pane-specification-id='0' param='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[tmn:Calculation_1430737335239405583:ok]' show-title='false' type-v2='color' w='6002' x='93317' y='27170'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='42767' id='15' is-fixed='true' name='REGISTRATION' w='41275' x='58230' y='56227'>
+                  <layout-cache minheight='198' minwidth='224' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BECA82E6-660D-42AE-B3F7-515C92B536DC}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='TOTAL USERS'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='48'>
+            <card type='columns' />
+          </strip>
+          <strip size='48'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{2B83992D-65D2-4F51-AFE2-C16D15174459}' />
+    </window>
+    <window class='worksheet' name='TRIAL USERS'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{BC91748C-2162-4809-8C58-08DAFD638F46}' />
+    </window>
+    <window class='worksheet' name='PAID USERS'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{AAB40156-C2FF-4EC3-B134-EA02179220CB}' />
+    </window>
+    <window class='worksheet' name='REGISTRATION'>
+      <cards>
+        <edge name='left'>
+          <strip size='245'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='48'>
+            <card type='columns' />
+          </strip>
+          <strip size='48'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{5185B7B5-80C3-4600-8B73-151C478AA407}' />
+    </window>
+    <window class='worksheet' name='FUNNEL CHART '>
+      <cards>
+        <edge name='left'>
+          <strip size='228'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='48'>
+            <card type='columns' />
+          </strip>
+          <strip size='48'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[none:event:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1f8xdrf1ac7dbq0zrap4d0noaf1h].[usr:Calculation_1430737335204896770:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{2B50A732-0085-4F28-BF7A-B3F7BCBBC88F}' />
+    </window>
+    <window class='worksheet' name='AVG DAYS'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{43C72C5C-019A-4F9B-8E9E-427F961BE878}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard '>
+      <viewpoints>
+        <viewpoint name='AVG DAYS'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='FUNNEL CHART '>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='2' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+        <viewpoint name='PAID USERS'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='REGISTRATION'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TOTAL USERS'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TRIAL USERS'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='9' />
+      <simple-id uuid='{0A7CBBA4-5692-4F9F-A6BB-D44C6991B84C}' />
+    </window>
+  </windows>
+</workbook>
